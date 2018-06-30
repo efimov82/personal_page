@@ -1,0 +1,125 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  display: grid;
+  grid-template: auto;
+  grid-template-rows: auto;
+}
+
+.bg1, .bg2, .bg3, .bg4 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+}
+
+.bg1 {
+  z-index: -1;
+  background-color: #a8d2ff;
+  -webkit-clip-path: polygon(0 0, 100% 0, 30% 5%, 12% 14%, 0 54%);
+  clip-path: polygon(0 0, 100% 0, 30% 5%, 12% 14%, 0 54%);
+}
+
+.bg2 {
+  z-index: -2;
+  background-color: #91c0f1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 42% 8%, 15% 23%, 0 63%);
+  clip-path: polygon(0 0, 100% 0, 42% 8%, 15% 23%, 0 63%);
+}
+
+.bg3 {
+  z-index: -1;
+  background-color: #226dbc;
+  -webkit-clip-path: polygon(72% 74%, 100% 27%, 100% 100%, 5% 100%);
+  clip-path: polygon(72% 74%, 100% 27%, 100% 100%, 5% 100%);
+}
+
+.bg4 {
+  z-index: -2;
+  background-color: #2a5f98;
+  -webkit-clip-path: polygon(63% 69%, 100% 9%, 100% 100%, 5% 100%);
+  clip-path: polygon(63% 69%, 100% 9%, 100% 100%, 5% 100%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50% auto;
+  height: auto;
+  align-self: center;
+  margin: 0 50px;
+}
+
+ul {
+  list-style-type: none;
+  perspective: 2000px;
+
+}
+
+ul li {
+  display: grid;
+  grid-template-columns: 20% auto;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transform: rotateY(-40deg) rotateX(45deg);
+  position: absolute;
+  border-bottom: 4px solid rgb(0, 0, 0, .2);
+  mix-blend-mode: multiply;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+ul li:nth-child(1) {
+  background: #fff59c;
+  top: -105px;
+  z-index: 2;
+}
+
+ul li:nth-child(2) {
+  background: #beffb5;
+  top: 0;
+  z-index: 1;
+}
+
+ul li:nth-child(3) {
+  background: #a3ccfa;
+  top: 105px;
+}
+
+ul li:nth-child(4) {
+  background: #ffdaf7;
+  top: 210px;
+  z-index: 2;
+}
+
+ul li:hover {
+  transform: rotateY(-10deg) rotateX(0deg) scale(1.02);
+  transition: transform .6s ease-out;
+  z-index: 3;
+  mix-blend-mode: normal;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: 'Indie Flower', cursive;
+}
+
+#left > p {
+  color: rgb(75, 73, 73);
+  font-size: 1.4em;
+  
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  margin: 20px;
+}
+
+span {
+  margin: 0 0 0 40px;
+}
